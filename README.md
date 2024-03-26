@@ -1,4 +1,4 @@
-# @linz/tags
+# @linzjs/cdk-tags
 
 CDK construct to apply common tags to constructs
 
@@ -8,12 +8,12 @@ CDK construct to apply common tags to constructs
 To apply the common set of tags for a s3 bucket:
 
 ```typescript
-import {applyTags} from '@linzjs/tags';
+import {applyTags} from '@linzjs/cdk-tags';
 
 const bucket = new Bucket(this, 'ImageryArchive')
 
 applyTags(bucket, {
-  application: 'imagery',
+  application: 'basemaps',
   group: 'li',
   classification: SecurityClassification.Unclassified,
   data: { isMaster: true, isPublic: true, role: TagDataRole.Archive },

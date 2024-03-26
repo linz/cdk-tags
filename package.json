@@ -1,5 +1,5 @@
 {
-  "name": "@linzjs/cdk-tag",
+  "name": "@linzjs/cdk-tags",
   "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
