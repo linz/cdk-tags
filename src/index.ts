@@ -1,1 +1,1 @@
-export { applyTags } from './tags.js';
+export { applyTags, applyTagsData } from './tags.js';
