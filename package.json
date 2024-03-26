@@ -1,0 +1,37 @@
+{
+  "name": "@linzjs/cdk-tag",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "Land Information New Zealand",
+    "url": "https://linz.govt.nz",
+    "organization": true
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "npx eslint . --ignore-path .gitignore",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "url": "git://github.com/linz/cdk-tag.git",
+    "type": "git"
+  },
+  "peerDependencies": {
+    "aws-cdk-lib": "*",
+    "constructs": "*"
+  },
+  "devDependencies": {
+    "@linzjs/style": "^5.2.0",
+    "@types/node": "^20.11.30"
+  }
+}
