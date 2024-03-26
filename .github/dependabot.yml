@@ -8,6 +8,4 @@ updates:
     directory: '/'
     schedule:
       interval: daily
-    commit-message:
-      include: 'scope'
     open-pull-requests-limit: 10
