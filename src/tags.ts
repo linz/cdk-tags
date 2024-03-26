@@ -81,7 +81,6 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   // Git Tags
   tag(construct, 'linz:git:hash', buildInfo.hash);
   tag(construct, 'linz:git:repository', process.env['GITHUB_REPOSITORY'] ?? ctx.repository);
-  tag(construct, 'linz:last-updated', new Date().toISOString());
 
   // Github actions build information
   tag(construct, 'linz:build:id', buildInfo.buildId);
