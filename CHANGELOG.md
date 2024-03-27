@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/linz/cdk-tag/compare/v1.0.1...v1.0.2) (2024-03-27)
+
+
+### Bug Fixes
+
+* publish to npm not github ([f4fa42c](https://github.com/linz/cdk-tag/commit/f4fa42c0dabc034fb10efd0d312334145049c3e8))
+
 ## [1.0.1](https://github.com/linz/cdk-tag/compare/v1.0.0...v1.0.1) (2024-03-26)
 
 
