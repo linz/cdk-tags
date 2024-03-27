@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/linz/cdk-tag/compare/v1.0.3...v1.1.0) (2024-03-27)
+
+
+### Features
+
+* expose getGitBuildInfo ([8513ee9](https://github.com/linz/cdk-tag/commit/8513ee90d5627e95d984300936a027ec301f5f8b))
+
+
+### Bug Fixes
+
+* actually publish built code ([89fc7fb](https://github.com/linz/cdk-tag/commit/89fc7fbab21ca60f5bb53bad5394f37aa1a48d96))
+
 ## [1.0.3](https://github.com/linz/cdk-tag/compare/v1.0.2...v1.0.3) (2024-03-27)
 
 
