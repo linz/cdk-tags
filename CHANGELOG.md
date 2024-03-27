@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/linz/cdk-tag/compare/v1.0.2...v1.0.3) (2024-03-27)
+
+
+### Bug Fixes
+
+* publish needs access to id-token ([110f251](https://github.com/linz/cdk-tag/commit/110f25159a3e65e547b1e88e9dbe8aca920daeef))
+
 ## [1.0.2](https://github.com/linz/cdk-tag/compare/v1.0.1...v1.0.2) (2024-03-27)
 
 
