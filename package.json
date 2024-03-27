@@ -20,7 +20,7 @@
     "node": ">=18.0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "repository": {
     "url": "git://github.com/linz/cdk-tag.git",
