@@ -1,10 +1,10 @@
 {
   "name": "@linzjs/cdk-tags",
   "version": "1.0.3",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
   "files": [
-    "dist"
+    "build"
   ],
   "author": {
     "name": "Land Information New Zealand",
