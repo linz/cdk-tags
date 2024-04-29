@@ -64,7 +64,7 @@ export interface TagsBase {
   /**
    * collection git info, commit, version etc
    */
-  commitInfo?: boolean;
+  skipGitInfo?: boolean;
 
   /** Data classification tags */
   data?: TagsData;
@@ -84,7 +84,7 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
     throw new Error('Only unclassified constructs can be made public');
   }
 
-  const buildInfo = ctx.commitInfo ? getGitBuildInfo() : undefined;
+  const buildInfo = ctx.skipGitInfo ? undefined : getGitBuildInfo();
 
   // applications tags
   tag(construct, 'linz.app.name', ctx.application);
@@ -94,6 +94,7 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   // Ownership tags
   tag(construct, 'linz.group', ctx.group);
   tag(construct, 'linz.group.responder', ctx.responderTeam ?? 'NotSet');
+  tag(construct, 'linz.app.criticality', ctx.criticality);
 
   // Git Tags
   if (buildInfo) tag(construct, 'linz.git.hash', buildInfo.hash);
