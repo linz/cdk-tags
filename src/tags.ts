@@ -96,11 +96,11 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   tag(construct, 'linz.group.responder', ctx.responderTeam ?? 'NotSet');
 
   // Git Tags
-  if(buildInfo) tag(construct, 'linz.git.hash', buildInfo.hash);
+  if (buildInfo) tag(construct, 'linz.git.hash', buildInfo.hash);
   tag(construct, 'linz.git.repository', process.env['GITHUB_REPOSITORY'] ?? ctx.repository);
 
   // Github actions build information
-  if(buildInfo) tag(construct, 'linz.build.id', buildInfo.buildId);
+  if (buildInfo) tag(construct, 'linz.build.id', buildInfo.buildId);
 
   // Security
   tag(construct, 'linz.security.classification', ctx.classification);
