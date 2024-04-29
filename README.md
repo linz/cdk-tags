@@ -18,7 +18,6 @@ applyTags(bucket, {
   classification: SecurityClassification.Unclassified,
   data: { isMaster: true, isPublic: true, role: TagDataRole.Archive },
   criticality: 'low',
-  commitInfo: true,
 });
 ```
 
