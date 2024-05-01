@@ -51,6 +51,22 @@ export interface TagsBase {
    */
   classification: SecurityClassification;
 
+  /**
+   * Criticality of the resources
+   */
+  criticality: 'critical' | 'high' | 'medium' | 'low';
+
+  /**
+   * THe responder team listed in OpsGenie.
+   * @see https://toitutewhenua.app.opsgenie.com/teams/list
+   */
+  responderTeam?: string;
+  /**
+   * collection git info, commit, version etc
+   * @default false
+   */
+  skipGitInfo?: boolean;
+
   /** Data classification tags */
   data?: TagsData;
 }
@@ -68,30 +84,33 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   if (ctx.data?.isPublic && ctx.classification !== SecurityClassification.Unclassified) {
     throw new Error('Only unclassified constructs can be made public');
   }
-  const buildInfo = getGitBuildInfo();
+
+  const buildInfo = ctx.skipGitInfo ? undefined : getGitBuildInfo();
 
   // applications tags
-  tag(construct, 'linz:app:name', ctx.application);
-  tag(construct, 'linz:app:version', buildInfo.version);
-  tag(construct, 'linz:environment', ctx.environment);
+  tag(construct, 'linz.app.name', ctx.application);
+  if (buildInfo) tag(construct, 'linz.app.version', buildInfo.version);
+  tag(construct, 'linz.environment', ctx.environment);
 
   // Ownership tags
-  tag(construct, 'linz:group', ctx.group);
+  tag(construct, 'linz.group', ctx.group);
+  tag(construct, 'linz.responder.team', ctx.responderTeam ?? 'NotSet');
+  tag(construct, 'linz.app.criticality', ctx.criticality);
 
   // Git Tags
-  tag(construct, 'linz:git:hash', buildInfo.hash);
-  tag(construct, 'linz:git:repository', process.env['GITHUB_REPOSITORY'] ?? ctx.repository);
+  if (buildInfo) tag(construct, 'linz.git.hash', buildInfo.hash);
+  tag(construct, 'linz.git.repository', process.env['GITHUB_REPOSITORY'] ?? ctx.repository);
 
   // Github actions build information
-  tag(construct, 'linz:build:id', buildInfo.buildId);
+  if (buildInfo) tag(construct, 'linz.build.id', buildInfo.buildId);
 
   // Security
-  tag(construct, 'linz:security:classification', ctx.classification);
+  tag(construct, 'linz.security.classification', ctx.classification);
   if (ctx.data) applyTagsData(construct, ctx.data);
 }
 
 export function applyTagsData(construct: IConstruct, tags: TagsData): void {
-  tag(construct, 'linz:data:role', tags.role);
-  tag(construct, 'linz:data:is-master', String(tags.isMaster ?? false));
-  tag(construct, 'linz:data:is-public', String(tags.isPublic ?? false));
+  tag(construct, 'linz.data.role', tags.role);
+  tag(construct, 'linz.data.is-master', String(tags.isMaster ?? false));
+  tag(construct, 'linz.data.is-public', String(tags.isPublic ?? false));
 }

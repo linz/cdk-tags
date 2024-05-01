@@ -17,6 +17,7 @@ applyTags(bucket, {
   group: 'li',
   classification: SecurityClassification.Unclassified,
   data: { isMaster: true, isPublic: true, role: TagDataRole.Archive },
+  criticality: 'low',
 });
 ```
 
