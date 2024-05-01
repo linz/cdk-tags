@@ -94,7 +94,7 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
 
   // Ownership tags
   tag(construct, 'linz.group', ctx.group);
-  tag(construct, 'linz.group.responder', ctx.responderTeam ?? 'NotSet');
+  tag(construct, 'linz.responder.team', ctx.responderTeam ?? 'NotSet');
   tag(construct, 'linz.app.criticality', ctx.criticality);
 
   // Git Tags
