@@ -1,3 +1,4 @@
-export { getGitBuildInfo } from './build.js';
-export { SecurityClassification } from './security.js';
-export { applyTags, applyTagsData } from './tags.js';
+export { getGitBuildInfo } from './build';
+export { SecurityClassification } from './security';
+export type { TagsBase } from './tags';
+export { applyTags, applyTagsData } from './tags';
