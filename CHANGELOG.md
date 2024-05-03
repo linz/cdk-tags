@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/linz/cdk-tags/compare/v1.2.1...v1.3.0) (2024-05-03)
+
+
+### Features
+
+* export TagsBase type for consumer to reference ([#21](https://github.com/linz/cdk-tags/issues/21)) ([52ba11a](https://github.com/linz/cdk-tags/commit/52ba11abc65c87005d3e09007da62bbc26fa0961))
+
 ## [1.2.1](https://github.com/linz/cdk-tags/compare/v1.2.0...v1.2.1) (2024-05-03)
 
 
