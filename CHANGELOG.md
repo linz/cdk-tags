@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/linz/cdk-tags/compare/v1.2.0...v1.2.1) (2024-05-03)
+
+
+### Bug Fixes
+
+* correct git package url ([#19](https://github.com/linz/cdk-tags/issues/19)) ([354e712](https://github.com/linz/cdk-tags/commit/354e7129202735d26de56180d2d001d574d5f015))
+
 ## [1.2.0](https://github.com/linz/cdk-tags/compare/v1.1.0...v1.2.0) (2024-05-03)
 
 
