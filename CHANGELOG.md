@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/linz/cdk-tags/compare/v1.1.0...v1.2.0) (2024-05-03)
+
+
+### Features
+
+* added new tags and updated tag key format ([#17](https://github.com/linz/cdk-tags/issues/17)) ([49b3cac](https://github.com/linz/cdk-tags/commit/49b3cac2e755011eb514563ef97c469b17371025))
+
 ## [1.1.0](https://github.com/linz/cdk-tag/compare/v1.0.3...v1.1.0) (2024-03-27)
 
 
