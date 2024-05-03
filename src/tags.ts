@@ -62,7 +62,7 @@ export interface TagsBase {
    */
   responderTeam?: string;
   /**
-   * collection git info, commit, version etc
+   * skip collection of git info, commit, version etc
    * @default false
    */
   skipGitInfo?: boolean;
