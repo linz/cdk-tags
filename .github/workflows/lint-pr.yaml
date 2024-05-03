@@ -1,0 +1,14 @@
+name: lint-pr-title
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  main:
+    name: Validate PR title
+    runs-on: ubuntu-latest
+    steps:
+      - uses: linz/action-pull-request-lint@4744d5a3ab84000afc4eb5dc98b7fd19d7682fff # v1.1.0
