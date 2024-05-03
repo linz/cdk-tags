@@ -23,7 +23,7 @@
     "access": "public"
   },
   "repository": {
-    "url": "git://github.com/linz/cdk-tag.git",
+    "url": "git://github.com/linz/cdk-tags.git",
     "type": "git"
   },
   "peerDependencies": {
