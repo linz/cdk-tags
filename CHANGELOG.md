@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/linz/cdk-tags/compare/v1.3.0...v1.4.0) (2024-05-13)
+
+
+### Features
+
+* change the criticality tag to impact tag ([#25](https://github.com/linz/cdk-tags/issues/25)) ([af0239f](https://github.com/linz/cdk-tags/commit/af0239f5a395eacf681cdc5fc7df7239ab511892))
+
 ## [1.3.0](https://github.com/linz/cdk-tags/compare/v1.2.1...v1.3.0) (2024-05-03)
 
 
