@@ -52,9 +52,10 @@ export interface TagsBase {
   classification: SecurityClassification;
 
   /**
-   * Criticality of the resources
+   * Operational impact of the resources on runtime overall system
+   * @see https://toitutewhenua.atlassian.net/wiki/spaces/STEP/pages/524059414/OpsGenie+Incident+Priority+Matrix
    */
-  criticality: 'critical' | 'high' | 'medium' | 'low';
+  impact: 'high' | 'medium' | 'low';
 
   /**
    * THe responder team listed in OpsGenie.
@@ -95,7 +96,7 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   // Ownership tags
   tag(construct, 'linz.group', ctx.group);
   tag(construct, 'linz.responder.team', ctx.responderTeam ?? 'NotSet');
-  tag(construct, 'linz.app.criticality', ctx.criticality);
+  tag(construct, 'linz.app.impact', ctx.impact);
 
   // Git Tags
   if (buildInfo) tag(construct, 'linz.git.hash', buildInfo.hash);
