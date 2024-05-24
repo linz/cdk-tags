@@ -5,7 +5,6 @@ import { getGitBuildInfo } from './build.js';
 import { TagsData } from './data.js';
 import { ResponderTeam } from './responder-teams';
 import { SecurityClassification } from './security.js';
-import {ResponderTeam} from "./responder-teams";
 
 export interface TagsBase {
   /**
