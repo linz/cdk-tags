@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/linz/cdk-tags/compare/v1.5.0...v1.6.0) (2024-05-24)
+
+
+### Features
+
+* updating impact values one last time  ([#32](https://github.com/linz/cdk-tags/issues/32)) ([75238cb](https://github.com/linz/cdk-tags/commit/75238cb9919e4130b46e84017587c92ef22bdeed))
+
 ## [1.5.0](https://github.com/linz/cdk-tags/compare/v1.4.0...v1.5.0) (2024-05-24)
 
 
