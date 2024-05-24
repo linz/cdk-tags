@@ -31,7 +31,7 @@
     "constructs": "*"
   },
   "devDependencies": {
-    "@linzjs/style": "^5.2.0",
+    "@linzjs/style": "^5.3.0",
     "@types/node": "^20.12.11"
   }
 }
