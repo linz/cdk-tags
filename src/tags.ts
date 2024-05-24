@@ -3,6 +3,7 @@ import { IConstruct } from 'constructs';
 
 import { getGitBuildInfo } from './build.js';
 import { TagsData } from './data.js';
+import { ResponderTeam } from './responder-teams';
 import { SecurityClassification } from './security.js';
 
 export interface TagsBase {
@@ -55,13 +56,13 @@ export interface TagsBase {
    * Operational impact of the resources on runtime overall system
    * @see https://toitutewhenua.atlassian.net/wiki/spaces/STEP/pages/524059414/OpsGenie+Incident+Priority+Matrix
    */
-  impact: 'high' | 'medium' | 'low';
+  impact: 'high' | 'moderate' | 'low';
 
   /**
    * THe responder team listed in OpsGenie.
    * @see https://toitutewhenua.app.opsgenie.com/teams/list
    */
-  responderTeam?: string;
+  responderTeam?: ResponderTeam;
   /**
    * skip collection of git info, commit, version etc
    * @default false
@@ -84,6 +85,9 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   // TODO is this check valid here?
   if (ctx.data?.isPublic && ctx.classification !== SecurityClassification.Unclassified) {
     throw new Error('Only unclassified constructs can be made public');
+  }
+  if (!ctx.application.match(RegExp(/^[a-zA-Z0-9 -]+$/))) {
+    throw new Error('linz.app.name has to match /^[a-zA-Z0-9 -]+$/');
   }
 
   const buildInfo = ctx.skipGitInfo ? undefined : getGitBuildInfo();
