@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/linz/cdk-tags/compare/v1.4.0...v1.5.0) (2024-05-24)
+
+
+### Features
+
+* Added tag validations and updated impact tag values ([#30](https://github.com/linz/cdk-tags/issues/30)) ([8720b1a](https://github.com/linz/cdk-tags/commit/8720b1a6743f9ffd8ff8e07cdb63218522587f0a))
+
 ## [1.4.0](https://github.com/linz/cdk-tags/compare/v1.3.0...v1.4.0) (2024-05-13)
 
 
