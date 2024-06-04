@@ -41,19 +41,24 @@ applyTags(bucket2, commonTags);
 ```
 ## Contributing
 
-### Adding responder teams.
+### Responder Teams
+
+Responder teams are used to route alerts to the correct team in OpsGenie. The responder team name must match the team name in OpsGenie.
+Only prod ops team members can create, rename or remove responder teams in OpsGenie.
+
+#### Adding responder teams.
 
 Contact the prod ops team in slack at [#team-step-prod-ops](https://linz.enterprise.slack.com/archives/C05Q11EGLA0) 
-To create a new team in [opsgenie](https://toitutewhenua.app.opsgenie.com/teams/list)
+To create a new team in [OpsGenie](https://toitutewhenua.app.opsgenie.com/teams/list)
 once this team is created, add a new responder team to `src/responder-teams.ts` file with the new team name. These two names 
 must match to ensure New Relic alerts are sent to the correct team.
 
-### Renaming responder teams.
-
+#### Renaming responder teams.
+**Warning** Consult the prodOps team before renaming a responder team. It is strongly recommended to create a new team and migrate the alerts to the new team. 
 When renaming a responder team, contact the prod ops team in slack at [#team-step-prod-ops](https://linz.enterprise.slack.com/archives/C05Q11EGLA0)
 once the name as been updated, update `src/responder-teams.ts` to match the new name. And ensure you update the `responderTeam` in your `applyTags()` function.
 
-### Removing responder teams.
+#### Removing responder teams.
 
 When removing a responder team, contact the prod ops team in slack at [#team-step-prod-ops](https://linz.enterprise.slack.com/archives/C05Q11EGLA0)
 once the team has been removed, remove the team from `src/responder-teams.ts` file.
