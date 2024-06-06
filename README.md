@@ -53,7 +53,7 @@ Once this team is created, add a new responder team to `src/responder-teams.ts` 
 must match to ensure New Relic alerts are sent to the correct team.
 
 #### Renaming responder teams.
-**Warning** Consult the prodOps team regarding renaming a responder team. It is strongly recommended to create a new team and migrate the alerts to the new team. 
+**Warning** Consult the prodOps team regarding renaming a responder team. It is strongly recommended to never rename responder team names as this results in the teams having to apply the new responderTeam value to all their cdk stacks. 
 When renaming a responder team, contact the prod ops team in slack at [#team-step-prod-ops](https://linz.enterprise.slack.com/archives/C05Q11EGLA0)
 once the name as been updated, update `src/responder-teams.ts` to match the new name. And ensure you update the `responderTeam` in your `applyTags()` function across all stack the team owns.
 
