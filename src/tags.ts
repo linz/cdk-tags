@@ -3,7 +3,7 @@ import { IConstruct } from 'constructs';
 
 import { getGitBuildInfo } from './build.js';
 import { TagsData } from './data.js';
-import { ResponderTeam } from './responder-teams';
+import { ResponderTeam } from './responder-teams.js';
 import { SecurityClassification } from './security.js';
 
 export interface TagsBase {
