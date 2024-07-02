@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/linz/cdk-tags/compare/v1.6.0...v1.7.0) (2024-07-02)
+
+
+### Features
+
+* allow custom data roles ([#45](https://github.com/linz/cdk-tags/issues/45)) ([6fcf98d](https://github.com/linz/cdk-tags/commit/6fcf98d10a08e135da92880346071c9d4e33e8de))
+
 ## [1.6.0](https://github.com/linz/cdk-tags/compare/v1.5.0...v1.6.0) (2024-05-24)
 
 
