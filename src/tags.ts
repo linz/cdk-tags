@@ -24,11 +24,9 @@ export interface TagsBase {
   application: string;
 
   /**
-   * Human friendly name for LINZ group that the resources belong to
-   *
-   * @example "step" or "li"
+   * LINZ group that the resources belong to
    */
-  group: string;
+  group: 'step' | 'li';
 
   /**
    * Git repository that this construct belongs to
