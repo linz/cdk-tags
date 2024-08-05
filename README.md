@@ -29,7 +29,7 @@ const commonTags: TagsBase = {
   application: 'basemaps',
   group: 'li',
   classification: SecurityClassification.Unclassified,
-  data: { isMaster: true, isPublic: true, role: 'archive },
+  data: { isMaster: true, isPublic: true, role: 'archive' },
   criticality: 'low',
 };
 
