@@ -9,5 +9,5 @@ export type ResponderTeam =
   | 'LANDONLINE - Survey External'
   | 'LANDONLINE - Titles Internal'
   | 'LINZ - Enterprise Platforms'
-  | 'LINZ - Basemaps';
+  | 'LINZ - Basemaps'
   | 'LINZ - Security';
