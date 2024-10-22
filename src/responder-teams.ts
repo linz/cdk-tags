@@ -8,7 +8,7 @@ export type ResponderTeam =
   | 'LANDONLINE - Notice of Change'
   | 'LANDONLINE - Search'
   | 'LANDONLINE - Survey External'
-  | 'LANDONLINE - Survey Internal'
   | 'LANDONLINE - Titles Internal'
   | 'LINZ - Enterprise Platforms'
   | 'LINZ - Basemaps';
+  | 'LINZ - Security';
