@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/linz/cdk-tags/compare/v1.7.0...v1.7.1) (2025-03-13)
+
+
+### Bug Fixes
+
+* update responder-teams ([#74](https://github.com/linz/cdk-tags/issues/74)) ([410486a](https://github.com/linz/cdk-tags/commit/410486a450cd893bed23886f0764088254c55033))
+
 ## [1.7.0](https://github.com/linz/cdk-tags/compare/v1.6.0...v1.7.0) (2024-07-25)
 
 
