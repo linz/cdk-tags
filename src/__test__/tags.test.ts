@@ -5,7 +5,7 @@ import { IConstruct } from 'constructs';
 import { SecurityClassification } from '../security.js';
 import { applyTags } from '../tags.js';
 
-describe('applyTags', async () => {
+describe('applyTags', () => {
   // If this test breaks the README needs to be updated
   it('should apply example from README.md', () => {
     applyTags({} as unknown as IConstruct, {
