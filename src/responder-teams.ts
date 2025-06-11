@@ -11,4 +11,5 @@ export type ResponderTeam =
   | 'LANDONLINE - Survey Internal'
   | 'LANDONLINE - Titles Internal'
   | 'LINZ - Enterprise Platforms'
-  | 'LINZ - Basemaps';
+  | 'LI - Basemaps'
+  | 'LI - Geospatial Data Engineering';
