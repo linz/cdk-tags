@@ -12,4 +12,3 @@ export type ResponderTeam =
   | 'LI - Geospatial Data Engineering'
   | 'LINZ - Enterprise Platforms'
   | 'LINZ - Security';
-
