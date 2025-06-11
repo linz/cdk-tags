@@ -13,10 +13,11 @@ const bucket = new Bucket(this, 'ImageryArchive');
 
 applyTags(bucket, {
   application: 'basemaps',
+  environment: 'prod',
   group: 'li',
   classification: SecurityClassification.Unclassified,
   data: { isMaster: true, isPublic: true, role: 'archive' },
-  criticality: 'low',
+  impact: 'moderate',
 });
 ```
 
@@ -27,10 +28,11 @@ import { applyTags, SecurityClassification, TagsBase } from '@linzjs/cdk-tags';
 
 const commonTags: TagsBase = {
   application: 'basemaps',
+  environment: 'prod',
   group: 'li',
   classification: SecurityClassification.Unclassified,
   data: { isMaster: true, isPublic: true, role: 'archive' },
-  criticality: 'low',
+  impact: 'moderate',
 };
 
 const bucket1 = new Bucket(this, 'ImageryArchive');

@@ -14,7 +14,7 @@ export interface TagsBase {
    *
    * @see AwsEnv in @linz/accounts
    */
-  environment: 'nonprod' | 'preprod' | 'prod';
+  environment: 'nonprod' | 'preprod' | 'prod' | 'postprod';
 
   /**
    * Application name

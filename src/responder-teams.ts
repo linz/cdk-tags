@@ -5,11 +5,11 @@ export type ResponderTeam =
   | 'LANDONLINE - Enablement'
   | 'LANDONLINE - L2 Technical Support'
   | 'LANDONLINE - Legacy Landonline'
-  | 'LANDONLINE - Notice of Change'
   | 'LANDONLINE - Search'
   | 'LANDONLINE - Survey External'
-  | 'LANDONLINE - Survey Internal'
   | 'LANDONLINE - Titles Internal'
-  | 'LINZ - Enterprise Platforms'
   | 'LI - Basemaps'
-  | 'LI - Geospatial Data Engineering';
+  | 'LI - Geospatial Data Engineering'
+  | 'LINZ - Enterprise Platforms'
+  | 'LINZ - Security';
+

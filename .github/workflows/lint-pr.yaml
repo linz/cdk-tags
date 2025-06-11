@@ -11,4 +11,4 @@ jobs:
     name: Validate PR title
     runs-on: ubuntu-latest
     steps:
-      - uses: linz/action-pull-request-lint@4744d5a3ab84000afc4eb5dc98b7fd19d7682fff # v1.1.0
+      - uses: linz/action-pull-request-lint@7adb4bc59b59dc6e097de831c29a17c2c1338826 # v1.2.0
