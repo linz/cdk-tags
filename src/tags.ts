@@ -1,6 +1,7 @@
 import { Tags } from 'aws-cdk-lib';
 import { IConstruct } from 'constructs';
 
+import { Backup } from './backup.js';
 import { getGitBuildInfo } from './build.js';
 import { TagsData } from './data.js';
 import { ResponderTeam } from './responder-teams.js';
@@ -69,6 +70,8 @@ export interface TagsBase {
 
   /** Data classification tags */
   data?: TagsData;
+
+  backup?: Backup;
 }
 
 // Apply a tag but skip application of tag if the value is undefined or empty
@@ -100,6 +103,8 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   tag(construct, 'linz.responder.team', ctx.responderTeam ?? 'NotSet');
   tag(construct, 'linz.app.impact', ctx.impact);
 
+  // Backup tags
+
   // Git Tags
   if (buildInfo) tag(construct, 'linz.git.hash', buildInfo.hash);
   tag(construct, 'linz.git.repository', process.env['GITHUB_REPOSITORY'] ?? ctx.repository);
@@ -110,10 +115,21 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   // Security
   tag(construct, 'linz.security.classification', ctx.classification);
   if (ctx.data) applyTagsData(construct, ctx.data);
+  if (ctx.backup) applyTagsBackup(construct, ctx.backup);
 }
 
 export function applyTagsData(construct: IConstruct, tags: TagsData): void {
   tag(construct, 'linz.data.role', tags.role);
   tag(construct, 'linz.data.is-master', String(tags.isMaster ?? false));
   tag(construct, 'linz.data.is-public', String(tags.isPublic ?? false));
+}
+
+export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
+  tag(construct, 'linz.backup.enabled', String(tags.enable ?? false));
+  tag(construct, 'linz.backup.retention', String(tags.retention_days ?? '30'));
+  const crossAccountEnabled = tags.replication?.enable ?? false;
+  tag(construct, 'linz.backup.replication.cross-account', String(crossAccountEnabled));
+  if (crossAccountEnabled) {
+    tag(construct, 'linz.backup.replication.cross-region', String(tags.replication?.multiregion ?? false));
+  }
 }
