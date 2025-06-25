@@ -71,6 +71,7 @@ export interface TagsBase {
   /** Data classification tags */
   data?: TagsData;
 
+  /** Backup requirements */
   backup?: Backup;
 }
 
@@ -124,12 +125,11 @@ export function applyTagsData(construct: IConstruct, tags: TagsData): void {
   tag(construct, 'linz.data.is-public', String(tags.isPublic ?? false));
 }
 
+// Backup
 export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
-  tag(construct, 'linz.backup.enabled', String(tags.enable ?? false));
-  tag(construct, 'linz.backup.retention', String(tags.retention_days ?? '30'));
-  const crossAccountEnabled = tags.replication?.enable ?? false;
-  tag(construct, 'linz.backup.replication.cross-account', String(crossAccountEnabled));
-  if (crossAccountEnabled) {
-    tag(construct, 'linz.backup.replication.cross-region', String(tags.replication?.multiregion ?? false));
+  if (tags.enabled) {
+    tag(construct, 'linz.backup.enabled', String(true));
+    tag(construct, 'linz.backup.retention', String(tags.retention ?? '183'));
+    tag(construct, 'linz.backup.schedule', String(tags.schedule ?? 'daily'));
   }
 }

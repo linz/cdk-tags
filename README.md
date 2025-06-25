@@ -7,7 +7,7 @@ CDK construct to apply common tags to constructs
 To apply the common set of tags for a s3 bucket:
 
 ```typescript
-import { applyTags, SecurityClassification } from '@linzjs/cdk-tags';
+import { applyTags, SecurityClassification, BackupSchedule } from '@linzjs/cdk-tags';
 
 const bucket = new Bucket(this, 'ImageryArchive');
 
@@ -18,6 +18,11 @@ applyTags(bucket, {
   classification: SecurityClassification.Unclassified,
   data: { isMaster: true, isPublic: true, role: 'archive' },
   impact: 'moderate',
+  backup: {
+    enabled: true,
+    retention: 365,
+    schedule: BackupSchedule.WEEKLY
+  }
 });
 ```
 
