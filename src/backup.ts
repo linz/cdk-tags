@@ -11,7 +11,7 @@ export interface Backup {
   enabled?: boolean;
   /**
    * How many days should the data be kept.
-   * @defaultValue 183
+   * @defaultValue 30
    */
   retention?: number;
   /**

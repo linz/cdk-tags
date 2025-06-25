@@ -104,8 +104,6 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   tag(construct, 'linz.responder.team', ctx.responderTeam ?? 'NotSet');
   tag(construct, 'linz.app.impact', ctx.impact);
 
-  // Backup tags
-
   // Git Tags
   if (buildInfo) tag(construct, 'linz.git.hash', buildInfo.hash);
   tag(construct, 'linz.git.repository', process.env['GITHUB_REPOSITORY'] ?? ctx.repository);
@@ -125,11 +123,11 @@ export function applyTagsData(construct: IConstruct, tags: TagsData): void {
   tag(construct, 'linz.data.is-public', String(tags.isPublic ?? false));
 }
 
-// Backup
+// Backup tags
 export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
   if (tags.enabled) {
     tag(construct, 'linz.backup.enabled', String(true));
-    tag(construct, 'linz.backup.retention', String(tags.retention ?? '183'));
+    tag(construct, 'linz.backup.retention', String(tags.retention ?? '30'));
     tag(construct, 'linz.backup.schedule', String(tags.schedule ?? 'daily'));
   }
 }
