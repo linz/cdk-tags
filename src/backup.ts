@@ -6,10 +6,6 @@ export enum BackupSchedule {
 
 export interface Backup {
   /**
-   * If enabled resources will be tagged with linz backup tags. And subsequently added to backup plans.
-   */
-  enabled?: boolean;
-  /**
    * How many days should the data be kept.
    * @defaultValue 30
    */

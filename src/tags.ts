@@ -114,6 +114,8 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   // Security
   tag(construct, 'linz.security.classification', ctx.classification);
   if (ctx.data) applyTagsData(construct, ctx.data);
+
+  // Backup
   if (ctx.backup) applyTagsBackup(construct, ctx.backup);
 }
 
@@ -125,9 +127,7 @@ export function applyTagsData(construct: IConstruct, tags: TagsData): void {
 
 // Backup tags
 export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
-  if (tags.enabled) {
-    tag(construct, 'linz.backup.enabled', String(true));
-    tag(construct, 'linz.backup.retention', String(tags.retention ?? '30'));
-    tag(construct, 'linz.backup.schedule', String(tags.schedule ?? 'daily'));
-  }
+  tag(construct, 'linz.backup.enabled', String(true));
+  tag(construct, 'linz.backup.retention', String(tags.retention ?? '30'));
+  tag(construct, 'linz.backup.schedule', String(tags.schedule ?? 'daily'));
 }

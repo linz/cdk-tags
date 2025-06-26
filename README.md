@@ -19,7 +19,6 @@ applyTags(bucket, {
   data: { isMaster: true, isPublic: true, role: 'archive' },
   impact: 'moderate',
   backup: {
-    enabled: true,
     retention: 365,
     schedule: BackupSchedule.WEEKLY
   }
