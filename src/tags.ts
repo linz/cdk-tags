@@ -1,6 +1,7 @@
 import { Tags } from 'aws-cdk-lib';
 import { IConstruct } from 'constructs';
 
+import { Backup } from './backup.js';
 import { getGitBuildInfo } from './build.js';
 import { TagsData } from './data.js';
 import { ResponderTeam } from './responder-teams.js';
@@ -69,6 +70,9 @@ export interface TagsBase {
 
   /** Data classification tags */
   data?: TagsData;
+
+  /** Backup requirements */
+  backup?: Backup;
 }
 
 // Apply a tag but skip application of tag if the value is undefined or empty
@@ -110,10 +114,20 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   // Security
   tag(construct, 'linz.security.classification', ctx.classification);
   if (ctx.data) applyTagsData(construct, ctx.data);
+
+  // Backup
+  if (ctx.backup) applyTagsBackup(construct, ctx.backup);
 }
 
 export function applyTagsData(construct: IConstruct, tags: TagsData): void {
   tag(construct, 'linz.data.role', tags.role);
   tag(construct, 'linz.data.is-master', String(tags.isMaster ?? false));
   tag(construct, 'linz.data.is-public', String(tags.isPublic ?? false));
+}
+
+// Backup tags
+export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
+  tag(construct, 'linz.backup.enabled', String(true));
+  tag(construct, 'linz.backup.retention', String(tags.retention ?? '30'));
+  tag(construct, 'linz.backup.schedule', String(tags.schedule ?? 'daily'));
 }
