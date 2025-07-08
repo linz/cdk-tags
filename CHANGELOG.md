@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/linz/cdk-tags/compare/v1.7.2...v1.8.0) (2025-07-08)
+
+
+### Features
+
+* Add backup related tags ([#143](https://github.com/linz/cdk-tags/issues/143)) ([56d5171](https://github.com/linz/cdk-tags/commit/56d5171e943081fb0c48d0003647bb4c184851f6))
+
 ## [1.7.2](https://github.com/linz/cdk-tags/compare/v1.7.1...v1.7.2) (2025-05-02)
 
 
