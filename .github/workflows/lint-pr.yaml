@@ -1,8 +1,9 @@
 name: lint-pr-title
 on:
-  pull_request_target:
+  pull_request:
     types:
       - opened
+      - reopened
       - edited
       - synchronize
 
