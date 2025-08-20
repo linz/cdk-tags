@@ -7,8 +7,8 @@ import { TagsData } from './data.js';
 import { ResponderTeam } from './responder-teams.js';
 import { SecurityClassification } from './security.js';
 
-export const impact = ['significant', 'moderate', 'minor'] as const;
-export type Impact = (typeof impact)[number];
+export const Impacts = ['significant', 'moderate', 'minor'] as const;
+export type Impact = (typeof Impacts)[number];
 
 export interface TagsBase {
   /**

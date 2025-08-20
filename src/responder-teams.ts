@@ -1,4 +1,4 @@
-export const ResponderTeam = [
+export const ResponderTeams = [
   'LANDONLINE - Common Services',
   'LANDONLINE - Datacom',
   'LANDONLINE - Dealings',
@@ -13,4 +13,4 @@ export const ResponderTeam = [
   'LINZ - Enterprise Platforms',
   'LINZ - Security',
 ] as const;
-export type ResponderTeam = (typeof ResponderTeam)[number];
+export type ResponderTeam = (typeof ResponderTeams)[number];
