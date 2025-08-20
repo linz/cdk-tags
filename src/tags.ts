@@ -7,6 +7,9 @@ import { TagsData } from './data.js';
 import { ResponderTeam } from './responder-teams.js';
 import { SecurityClassification } from './security.js';
 
+export const impact = ['significant', 'moderate', 'minor'] as const;
+export type Impact = (typeof impact)[number];
+
 export interface TagsBase {
   /**
    * Environment of the resource
@@ -55,7 +58,7 @@ export interface TagsBase {
    * Operational impact of the resources on runtime overall system
    * @see https://toitutewhenua.atlassian.net/wiki/spaces/STEP/pages/524059414/OpsGenie+Incident+Priority+Matrix
    */
-  impact: 'significant' | 'moderate' | 'minor';
+  impact: Impact;
 
   /**
    * THe responder team listed in OpsGenie.
