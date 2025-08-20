@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/linz/cdk-tags/compare/v1.9.0...v1.9.1) (2025-08-20)
+
+
+### Bug Fixes
+
+* barrel export on tags file ([#159](https://github.com/linz/cdk-tags/issues/159)) ([78685c9](https://github.com/linz/cdk-tags/commit/78685c927bc10904a1b688fe63c2bab2cfaf7355))
+
 ## [1.9.0](https://github.com/linz/cdk-tags/compare/v1.8.0...v1.9.0) (2025-08-20)
 
 
