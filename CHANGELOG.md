@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/linz/cdk-tags/compare/v1.8.0...v1.9.0) (2025-08-20)
+
+
+### Features
+
+* enhance tags, impact and responder team types ([c0b4db3](https://github.com/linz/cdk-tags/commit/c0b4db322be05beb340a9ad5c8b973539c3d6fb7))
+
 ## [1.8.0](https://github.com/linz/cdk-tags/compare/v1.7.2...v1.8.0) (2025-07-08)
 
 
