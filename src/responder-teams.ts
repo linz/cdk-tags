@@ -5,6 +5,7 @@ export const ResponderTeams = [
   'LANDONLINE - Enablement',
   'LANDONLINE - L2 Technical Support',
   'LANDONLINE - Legacy Landonline',
+  'LANDONLINE - SBS',
   'LANDONLINE - Search',
   'LANDONLINE - Survey External',
   'LANDONLINE - Titles Internal',
