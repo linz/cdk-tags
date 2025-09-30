@@ -5,6 +5,7 @@ export const ResponderTeams = [
   'LANDONLINE - Enablement',
   'LANDONLINE - L2 Technical Support',
   'LANDONLINE - Legacy Landonline',
+  'LANDONLINE - SBS',
   'LANDONLINE - Search',
   'LANDONLINE - Survey External',
   'LANDONLINE - Titles Internal',
@@ -12,6 +13,5 @@ export const ResponderTeams = [
   'LI - Geospatial Data Engineering',
   'LINZ - Enterprise Platforms',
   'LINZ - Security',
-  'LANDONLINE - SBS',
 ] as const;
 export type ResponderTeam = (typeof ResponderTeams)[number];
