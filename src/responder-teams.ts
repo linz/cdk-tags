@@ -12,5 +12,6 @@ export const ResponderTeams = [
   'LI - Geospatial Data Engineering',
   'LINZ - Enterprise Platforms',
   'LINZ - Security',
+  'LANDONLINE - SBS',
 ] as const;
 export type ResponderTeam = (typeof ResponderTeams)[number];
