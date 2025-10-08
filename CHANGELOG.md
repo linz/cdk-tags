@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/linz/cdk-tags/compare/v1.9.1...v1.10.0) (2025-10-08)
+
+
+### Features
+
+* add new SBS team to responders ([2034bb7](https://github.com/linz/cdk-tags/commit/2034bb7212e027e1e63e562b190d867e0da7166e))
+
 ## [1.9.1](https://github.com/linz/cdk-tags/compare/v1.9.0...v1.9.1) (2025-08-20)
 
 
