@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/linz/cdk-tags/compare/v1.10.0...v1.10.1) (2025-10-08)
+
+
+### Bug Fixes
+
+* set node version back 20.x ([#174](https://github.com/linz/cdk-tags/issues/174)) ([94d2bb3](https://github.com/linz/cdk-tags/commit/94d2bb3f141fec93b23c7a207b1736c7685f4ad4))
+
 ## [1.10.0](https://github.com/linz/cdk-tags/compare/v1.9.1...v1.10.0) (2025-10-08)
 
 
