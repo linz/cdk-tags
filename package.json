@@ -1,6 +1,6 @@
 {
   "name": "@linzjs/cdk-tags",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "files": [
