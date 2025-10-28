@@ -76,6 +76,8 @@ export interface TagsBase {
 
   /** Backup requirements */
   backup?: Backup;
+
+  dbEnvironment?: 'lab' | 'etllab' | 'nonprod' | 'postprod' | 'preprod' | 'prod';
 }
 
 // Apply a tag but skip application of tag if the value is undefined or empty
@@ -120,6 +122,11 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
 
   // Backup
   if (ctx.backup) applyTagsBackup(construct, ctx.backup);
+
+  // DB Environment
+  if (ctx.dbEnvironment) {
+    tag(construct, 'linz.db.env', ctx.dbEnvironment);
+  }
 }
 
 export function applyTagsData(construct: IConstruct, tags: TagsData): void {
