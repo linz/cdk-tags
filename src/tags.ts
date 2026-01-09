@@ -78,7 +78,7 @@ export interface TagsBase {
   /** Backup requirements */
   backup?: Backup;
   /** Backup requirements */
-  newrelic_logs?: NewRelicLogStreaming;
+  log_streaming?: NewRelicLogStreaming;
 }
 
 // Apply a tag but skip application of tag if the value is undefined or empty
