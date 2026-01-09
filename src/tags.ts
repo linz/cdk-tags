@@ -144,5 +144,5 @@ export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
 export function applyTagsNewRelicLogs(construct: IConstruct, tags: NewRelicLogStreaming): void {
   // this tag is not required, but just indicates that streaming is on
   tag(construct, 'linz.logs.newrelic-streaming', String(true));
-  tag(construct, 'linz.logs.newrelic-streaming-filter-pattern', String(tags.filter_pattern ?? ''));
+  tag(construct, 'linz.logs.streaming-filter-pattern', String(tags.filter_pattern ?? ''));
 }
