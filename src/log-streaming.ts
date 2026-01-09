@@ -1,4 +1,4 @@
-export interface NewRelicLogStreaming {
+export interface LogStreaming {
   /**
    * Subscription filter pattern
    * @defaultValue '' (all logs)
