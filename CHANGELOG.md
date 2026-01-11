@@ -1,11 +1,5 @@
 # Changelog
 
-## 1.10.2 (2026-01-12)
-
-### Features
-
-* add log streaming support with filter patterns
-
 ## [1.10.1](https://github.com/linz/cdk-tags/compare/v1.10.0...v1.10.1) (2025-10-08)
 
 
