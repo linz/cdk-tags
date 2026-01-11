@@ -123,7 +123,7 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
 
   // Backup
   if (ctx.backup) applyTagsBackup(construct, ctx.backup);
-  // NR logs
+  // Streaming logs
   if (ctx.log_streaming) applyTagsLogStreaming(construct, ctx.log_streaming);
 }
 
@@ -140,7 +140,7 @@ export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
   tag(construct, 'linz.backup.schedule', String(tags.schedule ?? 'daily'));
 }
 
-// NR logs
+// Streaming logs
 export function applyTagsLogStreaming(construct: IConstruct, tags: LogStreaming): void {
   tag(construct, 'linz.logs.streaming-filter-pattern', String(tags.filter_pattern ?? ''));
 }
