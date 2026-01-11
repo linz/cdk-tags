@@ -77,7 +77,7 @@ export interface TagsBase {
 
   /** Backup requirements */
   backup?: Backup;
-  /** Backup requirements */
+  /** Log streaming tags */
   log_streaming?: LogStreaming;
 }
 
