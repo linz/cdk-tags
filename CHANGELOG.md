@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.2](https://github.com/linz/cdk-tags/compare/v1.11.1...v1.11.2) (2026-01-12)
+
+
+### Bug Fixes
+
+* npm publish step ([#195](https://github.com/linz/cdk-tags/issues/195)) ([acf3f93](https://github.com/linz/cdk-tags/commit/acf3f93cd55e89512fa1e571fedc5393a8325018))
+
 ## [1.11.1](https://github.com/linz/cdk-tags/compare/v1.11.0...v1.11.1) (2026-01-12)
 
 
