@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/linz/cdk-tags/compare/v1.10.1...v1.11.0) (2026-01-12)
+
+
+### Features
+
+* ENABLE-5403 Add tags for NewRelic log streaming ([#192](https://github.com/linz/cdk-tags/issues/192)) ([80fe21f](https://github.com/linz/cdk-tags/commit/80fe21fbfdc2b5885461f6c3a7142e36df7e94d4))
+
 ## [1.10.1](https://github.com/linz/cdk-tags/compare/v1.10.0...v1.10.1) (2025-10-08)
 
 
