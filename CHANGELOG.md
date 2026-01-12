@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.1](https://github.com/linz/cdk-tags/compare/v1.11.0...v1.11.1) (2026-01-12)
+
+
+### Bug Fixes
+
+* npm trusted publishing BM-1429 ([#185](https://github.com/linz/cdk-tags/issues/185)) ([ecce7c1](https://github.com/linz/cdk-tags/commit/ecce7c1df8f87b3b2dd6e760b15fd067323aa162))
+
 ## [1.11.0](https://github.com/linz/cdk-tags/compare/v1.10.1...v1.11.0) (2026-01-12)
 
 
