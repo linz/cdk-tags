@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.3](https://github.com/linz/cdk-tags/compare/v1.11.2...v1.11.3) (2026-01-12)
+
+
+### Bug Fixes
+
+* bump nodejs version in workflow ([#197](https://github.com/linz/cdk-tags/issues/197)) ([f3002ca](https://github.com/linz/cdk-tags/commit/f3002ca9b2fde7c3e950217edd2c793be2f83867))
+
 ## [1.11.2](https://github.com/linz/cdk-tags/compare/v1.11.1...v1.11.2) (2026-01-12)
 
 
