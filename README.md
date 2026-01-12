@@ -21,6 +21,9 @@ applyTags(bucket, {
   backup: {
     retention: 365,
     schedule: BackupSchedule.WEEKLY
+  },
+  log_streaming: {
+    filter_pattern: 'ERROR' // pattern syntax - https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html
   }
 });
 ```

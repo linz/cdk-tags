@@ -4,6 +4,7 @@ import { IConstruct } from 'constructs';
 import { Backup } from './backup.js';
 import { getGitBuildInfo } from './build.js';
 import { TagsData } from './data.js';
+import { LogStreaming } from './log-streaming.js';
 import { ResponderTeam } from './responder-teams.js';
 import { SecurityClassification } from './security.js';
 
@@ -76,6 +77,8 @@ export interface TagsBase {
 
   /** Backup requirements */
   backup?: Backup;
+  /** Log streaming tags */
+  log_streaming?: LogStreaming;
 }
 
 // Apply a tag but skip application of tag if the value is undefined or empty
@@ -120,6 +123,8 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
 
   // Backup
   if (ctx.backup) applyTagsBackup(construct, ctx.backup);
+  // Streaming logs
+  if (ctx.log_streaming) applyTagsLogStreaming(construct, ctx.log_streaming);
 }
 
 export function applyTagsData(construct: IConstruct, tags: TagsData): void {
@@ -133,4 +138,9 @@ export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
   tag(construct, 'linz.backup.enabled', String(true));
   tag(construct, 'linz.backup.retention', String(tags.retention ?? '30'));
   tag(construct, 'linz.backup.schedule', String(tags.schedule ?? 'daily'));
+}
+
+// Streaming logs
+export function applyTagsLogStreaming(construct: IConstruct, tags: LogStreaming): void {
+  tag(construct, 'linz.logs.streaming-filter-pattern', String(tags.filter_pattern ?? ''));
 }
