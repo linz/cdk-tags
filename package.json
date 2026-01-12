@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "npx eslint . --ignore-path .gitignore",
-    "test": "node --test"
+    "test": "npm run build && node --test build/src/__test__/tags.test.js"
   },
   "engines": {
     "node": ">=18.0"

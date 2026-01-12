@@ -20,6 +20,9 @@ describe('applyTags', () => {
         retention: 365,
         schedule: BackupSchedule.WEEKLY,
       },
+      log_streaming: {
+        filter_pattern: 'ERROR',
+      },
     });
   });
 });
