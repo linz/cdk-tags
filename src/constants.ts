@@ -5,6 +5,7 @@ export const TagKeys = {
   // Application tags
   APP_NAME: 'linz.app.name',
   APP_VERSION: 'linz.app.version',
+  APP_IMPACT: 'linz.app.impact',
 
   // Environment tags
   ENVIRONMENT: 'linz.environment',
@@ -12,7 +13,6 @@ export const TagKeys = {
   // Ownership tags
   GROUP: 'linz.group',
   RESPONDER_TEAM: 'linz.responder.team',
-  APP_IMPACT: 'linz.app.impact',
 
   // Git tags
   GIT_HASH: 'linz.git.hash',
