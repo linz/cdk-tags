@@ -1,5 +1,6 @@
 export { Backup, BackupSchedule } from './backup.js';
 export { getGitBuildInfo } from './build.js';
+export { TagKeys } from './constants.js';
 export { CommonDataTags } from './data.js';
 export { ResponderTeam, ResponderTeams } from './responder-teams.js';
 export { SecurityClassification } from './security.js';

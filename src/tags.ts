@@ -3,6 +3,7 @@ import { IConstruct } from 'constructs';
 
 import { Backup } from './backup.js';
 import { getGitBuildInfo } from './build.js';
+import { TagKeys } from './constants.js';
 import { TagsData } from './data.js';
 import { LogStreaming } from './log-streaming.js';
 import { ResponderTeam } from './responder-teams.js';
@@ -101,24 +102,24 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   const buildInfo = ctx.skipGitInfo ? undefined : getGitBuildInfo();
 
   // applications tags
-  tag(construct, 'linz.app.name', ctx.application);
-  if (buildInfo) tag(construct, 'linz.app.version', buildInfo.version);
-  tag(construct, 'linz.environment', ctx.environment);
+  tag(construct, TagKeys.APP_NAME, ctx.application);
+  if (buildInfo) tag(construct, TagKeys.APP_VERSION, buildInfo.version);
+  tag(construct, TagKeys.ENVIRONMENT, ctx.environment);
 
   // Ownership tags
-  tag(construct, 'linz.group', ctx.group);
-  tag(construct, 'linz.responder.team', ctx.responderTeam ?? 'NotSet');
-  tag(construct, 'linz.app.impact', ctx.impact);
+  tag(construct, TagKeys.GROUP, ctx.group);
+  tag(construct, TagKeys.RESPONDER_TEAM, ctx.responderTeam ?? 'NotSet');
+  tag(construct, TagKeys.APP_IMPACT, ctx.impact);
 
   // Git Tags
-  if (buildInfo) tag(construct, 'linz.git.hash', buildInfo.hash);
-  tag(construct, 'linz.git.repository', process.env['GITHUB_REPOSITORY'] ?? ctx.repository);
+  if (buildInfo) tag(construct, TagKeys.GIT_HASH, buildInfo.hash);
+  tag(construct, TagKeys.GIT_REPOSITORY, process.env['GITHUB_REPOSITORY'] ?? ctx.repository);
 
   // Github actions build information
-  if (buildInfo) tag(construct, 'linz.build.id', buildInfo.buildId);
+  if (buildInfo) tag(construct, TagKeys.BUILD_ID, buildInfo.buildId);
 
   // Security
-  tag(construct, 'linz.security.classification', ctx.classification);
+  tag(construct, TagKeys.SECURITY_CLASSIFICATION, ctx.classification);
   if (ctx.data) applyTagsData(construct, ctx.data);
 
   // Backup
@@ -128,19 +129,19 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
 }
 
 export function applyTagsData(construct: IConstruct, tags: TagsData): void {
-  tag(construct, 'linz.data.role', tags.role);
-  tag(construct, 'linz.data.is-master', String(tags.isMaster ?? false));
-  tag(construct, 'linz.data.is-public', String(tags.isPublic ?? false));
+  tag(construct, TagKeys.DATA_ROLE, tags.role);
+  tag(construct, TagKeys.DATA_IS_MASTER, String(tags.isMaster ?? false));
+  tag(construct, TagKeys.DATA_IS_PUBLIC, String(tags.isPublic ?? false));
 }
 
 // Backup tags
 export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
-  tag(construct, 'linz.backup.enabled', String(true));
-  tag(construct, 'linz.backup.retention', String(tags.retention ?? '30'));
-  tag(construct, 'linz.backup.schedule', String(tags.schedule ?? 'daily'));
+  tag(construct, TagKeys.BACKUP_ENABLED, String(true));
+  tag(construct, TagKeys.BACKUP_RETENTION, String(tags.retention ?? '30'));
+  tag(construct, TagKeys.BACKUP_SCHEDULE, String(tags.schedule ?? 'daily'));
 }
 
 // Streaming logs
 export function applyTagsLogStreaming(construct: IConstruct, tags: LogStreaming): void {
-  tag(construct, 'linz.logs.streaming-filter-pattern', String(tags.filter_pattern ?? ''));
+  tag(construct, TagKeys.LOGS_STREAMING_FILTER_PATTERN, String(tags.filter_pattern ?? ''));
 }
