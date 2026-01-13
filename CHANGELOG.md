@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/linz/cdk-tags/compare/v1.11.3...v1.12.0) (2026-01-13)
+
+
+### Features
+
+* ENABLE-5403: export tag keys as constants ([#199](https://github.com/linz/cdk-tags/issues/199)) ([19a4563](https://github.com/linz/cdk-tags/commit/19a4563eceb3b4ad5372543b453a52470c1f1569))
+
 ## [1.11.3](https://github.com/linz/cdk-tags/compare/v1.11.2...v1.11.3) (2026-01-12)
 
 
