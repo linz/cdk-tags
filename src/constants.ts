@@ -33,7 +33,8 @@ export const TagKeys = {
   BACKUP_ENABLED: 'linz.backup.enabled',
   BACKUP_RETENTION: 'linz.backup.retention',
   BACKUP_SCHEDULE: 'linz.backup.schedule',
-
+  BACKUP_MULTI_REGION_COPY: 'linz.backup.multiRegionCopy',
+  
   // Logging tags
   LOGS_STREAMING_FILTER_PATTERN: 'linz.logs.streaming-filter-pattern',
 } as const;
