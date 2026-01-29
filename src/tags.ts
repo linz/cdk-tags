@@ -139,6 +139,7 @@ export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
   tag(construct, TagKeys.BACKUP_ENABLED, String(true));
   tag(construct, TagKeys.BACKUP_RETENTION, String(tags.retention ?? '30'));
   tag(construct, TagKeys.BACKUP_SCHEDULE, String(tags.schedule ?? 'daily'));
+  tag(construct, TagKeys.BACKUP_MULTIREGION, String(tags.multiRegionCopy ?? false));
 }
 
 // Streaming logs

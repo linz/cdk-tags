@@ -15,4 +15,9 @@ export interface Backup {
    * @defaultValue daily
    */
   schedule?: BackupSchedule;
+  /**
+   * Should this resource be copied to a backup vault in other regions
+   * @defaultValue false
+   */
+  multiRegionCopy?: boolean;
 }
