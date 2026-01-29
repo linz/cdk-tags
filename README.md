@@ -20,13 +20,16 @@ applyTags(bucket, {
   impact: 'moderate',
   backup: {
     retention: 365,
-    schedule: BackupSchedule.WEEKLY
+    schedule: BackupSchedule.WEEKLY,
+    multiRegionCopy: true,
   },
   log_streaming: {
     filter_pattern: 'ERROR' // pattern syntax - https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html
   }
 });
 ```
+
+> Set `backup.multiRegionCopy: true` to declare the the backups have to be available in second region. (tag applied: `linz.backup.multiRegionCopy`, default: `false`).
 
 To apply the common set of tags for multiple constructs:
 

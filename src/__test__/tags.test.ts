@@ -19,6 +19,7 @@ describe('applyTags', () => {
       backup: {
         retention: 365,
         schedule: BackupSchedule.WEEKLY,
+        multiRegionCopy: true,
       },
       log_streaming: {
         filter_pattern: 'ERROR',
