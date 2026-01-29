@@ -29,7 +29,7 @@ applyTags(bucket, {
 });
 ```
 
-> Set `backup.multiRegionCopy: true` to mark the resource for copying to backup vaults in other regions (tag applied: `linz.backup.multiRegionCopy`, default: `false`).
+> Set `backup.multiRegionCopy: true` to declare the the backups have to be available in second region. (tag applied: `linz.backup.multiRegionCopy`, default: `false`).
 
 To apply the common set of tags for multiple constructs:
 
