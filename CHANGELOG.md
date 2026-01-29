@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.0](https://github.com/linz/cdk-tags/compare/v1.13.0...v1.14.0) (2026-01-29)
+
+
+### Features
+
+* ENABLE-5710 Add tags and test for Multiregion Backup copy ([#207](https://github.com/linz/cdk-tags/issues/207)) ([4821f04](https://github.com/linz/cdk-tags/commit/4821f04c9550b93b2af0342db41ecb720efcf208))
+
 ## [1.13.0](https://github.com/linz/cdk-tags/compare/v1.12.0...v1.13.0) (2026-01-28)
 
 
