@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.0](https://github.com/linz/cdk-tags/compare/v1.14.0...v1.15.0) (2026-01-30)
+
+
+### Features
+
+* ENABLE-5714 add multi account tag for backup. ([#209](https://github.com/linz/cdk-tags/issues/209)) ([cd55e4e](https://github.com/linz/cdk-tags/commit/cd55e4ee065128b1e52912d1a95224e5ba474763))
+
 ## [1.14.0](https://github.com/linz/cdk-tags/compare/v1.13.0...v1.14.0) (2026-01-29)
 
 
