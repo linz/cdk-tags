@@ -20,4 +20,9 @@ export interface Backup {
    * @defaultValue false
    */
   multiRegionCopy?: boolean;
+  /**
+   * Should this resource be copied to a central backup vault shared by other accounts
+   * @defaultValue false
+   */
+  multiAccountCopy?: boolean;
 }
