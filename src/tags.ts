@@ -1,7 +1,7 @@
 import { Tags } from 'aws-cdk-lib';
 import { IConstruct } from 'constructs';
 
-import { Backup, BackupSchedule } from './backup.js';
+import { Backup } from './backup.js';
 import { getGitBuildInfo } from './build.js';
 import { TagKeys } from './constants.js';
 import { TagsData } from './data.js';
@@ -11,10 +11,6 @@ import { SecurityClassification } from './security.js';
 
 export const Impacts = ['significant', 'moderate', 'minor'] as const;
 export type Impact = (typeof Impacts)[number];
-const DefaultBackupRetentionDays = 30;
-const DefaultBackupSchedule = BackupSchedule.DAILY;
-const CentralLagVaultMaxRetentionDays = 30;
-const CentralLagVaultAllowedBackupSchedules: readonly BackupSchedule[] = [BackupSchedule.DAILY, BackupSchedule.WEEKLY];
 
 export interface TagsBase {
   /**
@@ -94,26 +90,6 @@ function tag(construct: IConstruct, key: string, value: string | undefined | nul
   Tags.of(construct).add(key, value);
 }
 
-function validateBackupTags(tags: Backup): void {
-  if (tags.retention !== undefined && tags.retention < 0) {
-    throw new Error('Backup retention must be a positive number');
-  }
-  if (tags.multiAccountCopy === true) {
-    if ((tags.retention ?? DefaultBackupRetentionDays) > CentralLagVaultMaxRetentionDays) {
-      throw new Error(
-        `Backup retention must be ${CentralLagVaultMaxRetentionDays} days or less when using multi-account copy`,
-      );
-    }
-    if (!CentralLagVaultAllowedBackupSchedules.includes(tags.schedule ?? DefaultBackupSchedule)) {
-      throw new Error(
-        `Backup schedule must be one of ${CentralLagVaultAllowedBackupSchedules.join(
-          ', ',
-        )} when using multi-account copy`,
-      );
-    }
-  }
-}
-
 export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   // TODO is this check valid here?
   if (ctx.data?.isPublic && ctx.classification !== SecurityClassification.Unclassified) {
@@ -160,10 +136,9 @@ export function applyTagsData(construct: IConstruct, tags: TagsData): void {
 
 // Backup tags
 export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
-  validateBackupTags(tags);
   tag(construct, TagKeys.BACKUP_ENABLED, String(true));
-  tag(construct, TagKeys.BACKUP_RETENTION, String(tags.retention ?? DefaultBackupRetentionDays));
-  tag(construct, TagKeys.BACKUP_SCHEDULE, String(tags.schedule ?? DefaultBackupSchedule));
+  tag(construct, TagKeys.BACKUP_RETENTION, String(tags.retention ?? '30'));
+  tag(construct, TagKeys.BACKUP_SCHEDULE, String(tags.schedule ?? 'daily'));
   if (tags.multiRegionCopy !== undefined) {
     tag(construct, TagKeys.BACKUP_MULTIREGION, String(tags.multiRegionCopy));
   }

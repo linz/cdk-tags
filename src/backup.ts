@@ -22,8 +22,6 @@ export interface Backup {
   multiRegionCopy?: boolean;
   /**
    * Should this resource be copied to a central backup vault shared by other accounts
-   *
-   * Note that the central backup vault is logically air-gapped, so the backup copies cannot be deleted prior to the completion of the retention period.
    * @defaultValue false
    */
   multiAccountCopy?: boolean;
