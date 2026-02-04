@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.0](https://github.com/linz/cdk-tags/compare/v1.16.0...v1.17.0) (2026-02-04)
+
+
+### Features
+
+* ENABLE-7089 revert validate backup tags ([#215](https://github.com/linz/cdk-tags/issues/215)) ([e7d50f5](https://github.com/linz/cdk-tags/commit/e7d50f558d2b2192bf546444cf7f5c3edf6be9e7))
+
 ## [1.16.0](https://github.com/linz/cdk-tags/compare/v1.15.0...v1.16.0) (2026-02-04)
 
 
