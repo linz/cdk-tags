@@ -145,6 +145,9 @@ export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
   if (tags.multiAccountCopy !== undefined) {
     tag(construct, TagKeys.BACKUP_MULTIACCOUNT, String(tags.multiAccountCopy));
   }
+  if (tags.continuousRetention !== undefined) {
+    tag(construct, TagKeys.BACKUP_CONTINUOUS_RETENTION, String(tags.continuousRetention));
+  }
 }
 
 // Streaming logs

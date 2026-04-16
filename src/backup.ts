@@ -25,4 +25,9 @@ export interface Backup {
    * @defaultValue false
    */
   multiAccountCopy?: boolean;
+  /**
+   * How many days should the continuous (PITR) backup be retained.
+   * Applies to RDS/Aurora resources. If not set, falls back to the snapshot retention value (max 35 days).
+   */
+  continuousRetention?: number;
 }
