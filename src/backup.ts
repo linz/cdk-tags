@@ -25,4 +25,15 @@ export interface Backup {
    * @defaultValue false
    */
   multiAccountCopy?: boolean;
+  /**
+   * Should continuous (PITR) backup be enabled for this resource.
+   * Supported for RDS/Aurora only.
+   * @defaultValue false
+   */
+  continuous?: boolean;
+  /**
+   * How many days should the continuous (PITR) backup be retained.
+   * If not set, falls back to the snapshot retention value.
+   */
+  continuousRetention?: number;
 }
