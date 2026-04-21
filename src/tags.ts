@@ -149,5 +149,6 @@ export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
 
 // Streaming logs
 export function applyTagsLogStreaming(construct: IConstruct, tags: LogStreaming): void {
+// not using tag() function as an empty value is a legit value for this tag.
   Tags.of(construct).add(TagKeys.LOGS_STREAMING_FILTER_PATTERN, String(tags.filter_pattern ?? ''));
 }
