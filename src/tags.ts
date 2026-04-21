@@ -82,7 +82,7 @@ export interface TagsBase {
   log_streaming?: LogStreaming;
 }
 
-// Apply a tag but skip application of tag if the value is undefined or empty
+/** Apply a tag but skip application of tag if the value is undefined or empty */
 function tag(construct: IConstruct, key: string, value: string | undefined | null): void {
   if (value == null) return;
   if (value === '') return;
@@ -149,5 +149,5 @@ export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
 
 // Streaming logs
 export function applyTagsLogStreaming(construct: IConstruct, tags: LogStreaming): void {
-  tag(construct, TagKeys.LOGS_STREAMING_FILTER_PATTERN, String(tags.filter_pattern ?? ''));
+  Tags.of(construct).add(TagKeys.LOGS_STREAMING_FILTER_PATTERN, String(tags.filter_pattern ?? ''));
 }
