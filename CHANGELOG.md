@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.1](https://github.com/linz/cdk-tags/compare/v1.17.0...v1.17.1) (2026-04-21)
+
+
+### Bug Fixes
+
+* allow empty filter pattern to log streaming tag ENABLE-7250 ([#232](https://github.com/linz/cdk-tags/issues/232)) ([5b0da9f](https://github.com/linz/cdk-tags/commit/5b0da9ff809373e389fc6eeed8a8b2c2d406a3e6))
+
 ## [1.17.0](https://github.com/linz/cdk-tags/compare/v1.16.0...v1.17.0) (2026-02-04)
 
 
