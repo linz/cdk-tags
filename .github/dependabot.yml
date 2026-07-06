@@ -6,6 +6,10 @@ updates:
       interval: daily
     cooldown:
       default-days: 15
+    ignore:
+      - dependency-name: pkg:localrepo/localrepo/local?repository_url=target
+      - dependency-name: pkg:localrepo/localrepo/local?repository_url=target
+      - dependency-name: pkg:localrepo/localrepo/local?repository_url=target
   - package-ecosystem: npm
     directory: '/'
     schedule:
