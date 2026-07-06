@@ -38,4 +38,7 @@ export const TagKeys = {
 
   // Logging tags
   LOGS_STREAMING_FILTER_PATTERN: 'linz.logs.streaming-filter-pattern',
+
+  // DR tags
+  DR_VALIDATION_CLUSTER_NAME: 'linz.dr.validation.cluster-name',
 } as const;
