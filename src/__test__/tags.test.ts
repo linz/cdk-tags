@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 
-import { IConstruct } from 'constructs';
+import { App, Stack } from 'aws-cdk-lib';
 
 import { BackupSchedule } from '../backup.js';
 import { SecurityClassification } from '../security.js';
@@ -9,7 +9,8 @@ import { applyTags } from '../tags.js';
 describe('applyTags', () => {
   // If this test breaks the README needs to be updated
   it('should apply example from README.md', () => {
-    applyTags({} as unknown as IConstruct, {
+    const stack = new Stack(new App(), 'TestStack');
+    applyTags(stack, {
       application: 'basemaps',
       environment: 'prod',
       group: 'li',
