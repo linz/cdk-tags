@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.17.2](https://github.com/linz/cdk-tags/compare/v1.17.1...v1.17.2) (2026-07-07)
+
+
+### Bug Fixes
+
+* cdk lib dependencies ([#252](https://github.com/linz/cdk-tags/issues/252)) ([c3dfac7](https://github.com/linz/cdk-tags/commit/c3dfac7413e23cd319a2f426da7d1aeafdbbc993))
+
 ## [1.17.1](https://github.com/linz/cdk-tags/compare/v1.17.0...v1.17.1) (2026-04-21)
 
 
