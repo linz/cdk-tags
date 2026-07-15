@@ -160,5 +160,5 @@ export function applyTagsLogStreaming(construct: IConstruct, tags: LogStreaming)
 
 // Disaster recovery tags
 export function applyTagsDR(construct: IConstruct, tags: DisasterRecovery): void {
-  tag(construct, TagKeys.DR_ENABLED, String(tags.drEnabled ?? false));
+  tag(construct, TagKeys.DR_ENABLED, String(tags.enabled ?? false));
 }
