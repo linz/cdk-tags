@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/linz/cdk-tags/compare/v1.17.2...v1.18.0) (2026-07-15)
+
+
+### Features
+
+* ENABLE-7571 add disaster recovery tag ([#257](https://github.com/linz/cdk-tags/issues/257)) ([672435f](https://github.com/linz/cdk-tags/commit/672435f30f508383cf3807aac088546fc9b3078a))
+
 ## [1.17.2](https://github.com/linz/cdk-tags/compare/v1.17.1...v1.17.2) (2026-07-07)
 
 
