@@ -27,7 +27,7 @@ applyTags(bucket, {
     filter_pattern: 'ERROR' // pattern syntax - https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html
   },
   dr: {
-    drEnabled: true, // Enable disaster recovery for this resource
+    drEnabled: true, // Enable disaster recovery plan for this resource
   }
 });
 ```
