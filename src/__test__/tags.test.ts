@@ -27,7 +27,7 @@ describe('applyTags', () => {
         filter_pattern: 'ERROR',
       },
       dr: {
-        drEnabled: true,
+        enabled: true,
       },
     });
   });
