@@ -26,6 +26,9 @@ describe('applyTags', () => {
       log_streaming: {
         filter_pattern: 'ERROR',
       },
+      dr: {
+        enabled: true,
+      },
     });
   });
 });
