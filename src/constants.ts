@@ -38,4 +38,7 @@ export const TagKeys = {
 
   // Logging tags
   LOGS_STREAMING_FILTER_PATTERN: 'linz.logs.streaming-filter-pattern',
+
+  // Disaster recovery tags
+  DR_ENABLED: 'linz.dr.enabled',
 } as const;

@@ -5,6 +5,7 @@ import { Backup } from './backup.js';
 import { getGitBuildInfo } from './build.js';
 import { TagKeys } from './constants.js';
 import { TagsData } from './data.js';
+import { DisasterRecovery } from './dr.js';
 import { LogStreaming } from './log-streaming.js';
 import { ResponderTeam } from './responder-teams.js';
 import { SecurityClassification } from './security.js';
@@ -80,6 +81,8 @@ export interface TagsBase {
   backup?: Backup;
   /** Log streaming tags */
   log_streaming?: LogStreaming;
+  /** Disaster recovery configuration */
+  dr?: DisasterRecovery;
 }
 
 /** Apply a tag but skip application of tag if the value is undefined or empty */
@@ -126,6 +129,8 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   if (ctx.backup) applyTagsBackup(construct, ctx.backup);
   // Streaming logs
   if (ctx.log_streaming) applyTagsLogStreaming(construct, ctx.log_streaming);
+  // Disaster recovery
+  if (ctx.dr) applyTagsDR(construct, ctx.dr);
 }
 
 export function applyTagsData(construct: IConstruct, tags: TagsData): void {
@@ -151,4 +156,9 @@ export function applyTagsBackup(construct: IConstruct, tags: Backup): void {
 export function applyTagsLogStreaming(construct: IConstruct, tags: LogStreaming): void {
   // not using tag() function as an empty value is a legit value for this tag.
   Tags.of(construct).add(TagKeys.LOGS_STREAMING_FILTER_PATTERN, String(tags.filter_pattern ?? ''));
+}
+
+// Disaster recovery tags
+export function applyTagsDR(construct: IConstruct, tags: DisasterRecovery): void {
+  tag(construct, TagKeys.DR_ENABLED, String(tags.drEnabled ?? false));
 }

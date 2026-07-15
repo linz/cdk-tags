@@ -25,6 +25,9 @@ applyTags(bucket, {
   },
   log_streaming: {
     filter_pattern: 'ERROR' // pattern syntax - https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html
+  },
+  dr: {
+    drEnabled: true, // Enable disaster recovery for this resource
   }
 });
 ```
@@ -32,6 +35,8 @@ applyTags(bucket, {
 > Set `backup.multiRegionCopy: true` to declare the the backups have to be available in second region. (tag applied: `linz.backup.multiRegionCopy`, default: `false`).
 
 > Set `backup.multiAccountCopy: true` to declare that the backups have to be available in a logically air-gapped (LAG) vault shared by the central audit account. Backups stored in the LAG vault cannot be deleted prior to the completion of the retention period, hence the retention period will be capped to 30 days.
+
+> Set `dr.drEnabled: true` to enable disaster recovery for this resource (tag applied: `linz.dr.enabled`, default: `false`).
 
 To apply the common set of tags for multiple constructs:
 
