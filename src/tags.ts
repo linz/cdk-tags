@@ -6,8 +6,8 @@ import { getGitBuildInfo } from './build.js';
 import { TagKeys } from './constants.js';
 import { TagsData } from './data.js';
 import { DisasterRecovery } from './dr.js';
-import { LolDbPlatform } from './lol-db-platform.js';
 import { LogStreaming } from './log-streaming.js';
+import { LolDbPlatform } from './lol-db-platform.js';
 import { ResponderTeam } from './responder-teams.js';
 import { SecurityClassification } from './security.js';
 
