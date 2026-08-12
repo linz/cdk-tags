@@ -41,7 +41,7 @@ applyTags(bucket, {
 
 > Set `dr.drEnabled: true` to enable disaster recovery plan generation for this resource (tag applied: `linz.dr.enabled`, default: `false`).
 
-> Set `lol.dbPlatform` to tag a resource with its database platform during the Landonline PG migration (tag applied: `linz.lol.dbPlatform`). Valid values: `'informix'` or `'pg'`. **Tactical tag — only relevant during the Landonline PostgreSQL migration.**
+> Set `lol.dbPlatform` to tag an AWS resource with its landonline database platform during the Landonline PG migration (tag applied: `linz.lol.dbPlatform`). Valid values: `'informix'` or `'pg'`. This help the monitoring PG services separately from informix. **Tactical tag — only relevant during the Landonline PostgreSQL migration.**
 
 To apply the common set of tags for multiple constructs:
 
