@@ -41,4 +41,7 @@ export const TagKeys = {
 
   // Disaster recovery tags
   DR_ENABLED: 'linz.dr.enabled',
+
+  // Landonline migration tags
+  LOL_DB_PLATFORM: 'linz.lol.dbPlatform',
 } as const;

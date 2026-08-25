@@ -28,7 +28,10 @@ applyTags(bucket, {
   },
   dr: {
     enabled: true, // Enable disaster recovery for this resource
-  }
+  },
+  lol: {
+    dbPlatform: 'pg', // Tactical: Landonline PG migration only. Valid values: 'informix' | 'pg'
+  },
 });
 ```
 
@@ -37,6 +40,8 @@ applyTags(bucket, {
 > Set `backup.multiAccountCopy: true` to declare that the backups have to be available in a logically air-gapped (LAG) vault shared by the central audit account. Backups stored in the LAG vault cannot be deleted prior to the completion of the retention period, hence the retention period will be capped to 30 days.
 
 > Set `dr.drEnabled: true` to enable disaster recovery plan generation for this resource (tag applied: `linz.dr.enabled`, default: `false`).
+
+> Set `lol.dbPlatform` to tag an AWS resource with its landonline database platform during the Landonline PG migration (tag applied: `linz.lol.dbPlatform`). Valid values: `'informix'` or `'pg'`. This help the monitoring PG services separately from informix. **Tactical tag — only relevant during the Landonline PostgreSQL migration.**
 
 To apply the common set of tags for multiple constructs:
 
