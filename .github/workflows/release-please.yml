@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 name: release-please
 jobs:
@@ -26,7 +27,7 @@ jobs:
 
     needs: release-please
     runs-on: ubuntu-latest
-    if: ${{ needs.release-please.outputs.release_created }}
+    if: ${{ needs.release-please.outputs.release_created || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Build and test
         uses: linz/action-typescript@v3
