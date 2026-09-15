@@ -7,6 +7,7 @@ import { TagKeys } from './constants.js';
 import { TagsData } from './data.js';
 import { DisasterRecovery } from './dr.js';
 import { LogStreaming } from './log-streaming.js';
+import { LolDbPlatform } from './lol-db-platform.js';
 import { ResponderTeam } from './responder-teams.js';
 import { SecurityClassification } from './security.js';
 
@@ -83,6 +84,11 @@ export interface TagsBase {
   log_streaming?: LogStreaming;
   /** Disaster recovery configuration */
   dr?: DisasterRecovery;
+  /**
+   * Landonline (LOL) database platform tag.
+   * Tactical tag only relevant during the Landonline PG migration.
+   */
+  lol?: LolDbPlatform;
 }
 
 /** Apply a tag but skip application of tag if the value is undefined or empty */
@@ -148,6 +154,10 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   // Disaster recovery
   if (ctx.dr) {
     applyTagsDR(construct, ctx.dr);
+  }
+  // Landonline migration
+  if (ctx.lol) {
+    tag(construct, TagKeys.LOL_DB_PLATFORM, ctx.lol.dbPlatform);
   }
 }
 

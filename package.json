@@ -1,6 +1,6 @@
 {
   "name": "@linzjs/cdk-tags",
-  "version": "1.18.0",
+  "version": "1.19.0",
   "author": {
     "name": "Land Information New Zealand",
     "url": "https://linz.govt.nz",
@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@linzjs/style": "^6.0.0",
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.4.0",
     "oxlint-tsgolint": "^0.22.1"
   },
   "peerDependencies": {

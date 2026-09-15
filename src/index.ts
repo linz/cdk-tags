@@ -4,6 +4,7 @@ export { getGitBuildInfo } from './build.js';
 export { TagKeys } from './constants.js';
 export { CommonDataTags } from './data.js';
 export type { DisasterRecovery } from './dr.js';
+export type { LolDbPlatform } from './lol-db-platform.js';
 export type { ResponderTeam } from './responder-teams.js';
 export { ResponderTeams } from './responder-teams.js';
 export { SecurityClassification } from './security.js';

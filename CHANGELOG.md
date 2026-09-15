@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.19.0](https://github.com/linz/cdk-tags/compare/v1.18.0...v1.19.0) (2026-08-25)
+
+
+### Features
+
+* add linz.lol.dbPlatform tactical tag for Landonline PG migration ([#266](https://github.com/linz/cdk-tags/issues/266)) ([923cb95](https://github.com/linz/cdk-tags/commit/923cb95fa67780bfb0c4df9c88142a3ac1b53ec1))
+
 ## [1.18.0](https://github.com/linz/cdk-tags/compare/v1.17.2...v1.18.0) (2026-07-15)
 
 
