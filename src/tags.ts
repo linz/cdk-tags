@@ -93,8 +93,12 @@ export interface TagsBase {
 
 /** Apply a tag but skip application of tag if the value is undefined or empty */
 function tag(construct: IConstruct, key: string, value: string | undefined | null): void {
-  if (value == null) return;
-  if (value === '') return;
+  if (value == null) {
+    return;
+  }
+  if (value === '') {
+    return;
+  }
 
   Tags.of(construct).add(key, value);
 }
@@ -112,7 +116,9 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
 
   // applications tags
   tag(construct, TagKeys.APP_NAME, ctx.application);
-  if (buildInfo) tag(construct, TagKeys.APP_VERSION, buildInfo.version);
+  if (buildInfo) {
+    tag(construct, TagKeys.APP_VERSION, buildInfo.version);
+  }
   tag(construct, TagKeys.ENVIRONMENT, ctx.environment);
 
   // Ownership tags
@@ -121,24 +127,38 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
   tag(construct, TagKeys.APP_IMPACT, ctx.impact);
 
   // Git Tags
-  if (buildInfo) tag(construct, TagKeys.GIT_HASH, buildInfo.hash);
+  if (buildInfo) {
+    tag(construct, TagKeys.GIT_HASH, buildInfo.hash);
+  }
   tag(construct, TagKeys.GIT_REPOSITORY, process.env['GITHUB_REPOSITORY'] ?? ctx.repository);
 
   // Github actions build information
-  if (buildInfo) tag(construct, TagKeys.BUILD_ID, buildInfo.buildId);
+  if (buildInfo) {
+    tag(construct, TagKeys.BUILD_ID, buildInfo.buildId);
+  }
 
   // Security
   tag(construct, TagKeys.SECURITY_CLASSIFICATION, ctx.classification);
-  if (ctx.data) applyTagsData(construct, ctx.data);
+  if (ctx.data) {
+    applyTagsData(construct, ctx.data);
+  }
 
   // Backup
-  if (ctx.backup) applyTagsBackup(construct, ctx.backup);
+  if (ctx.backup) {
+    applyTagsBackup(construct, ctx.backup);
+  }
   // Streaming logs
-  if (ctx.log_streaming) applyTagsLogStreaming(construct, ctx.log_streaming);
+  if (ctx.log_streaming) {
+    applyTagsLogStreaming(construct, ctx.log_streaming);
+  }
   // Disaster recovery
-  if (ctx.dr) applyTagsDR(construct, ctx.dr);
+  if (ctx.dr) {
+    applyTagsDR(construct, ctx.dr);
+  }
   // Landonline migration
-  if (ctx.lol) tag(construct, TagKeys.LOL_DB_PLATFORM, ctx.lol.dbPlatform);
+  if (ctx.lol) {
+    tag(construct, TagKeys.LOL_DB_PLATFORM, ctx.lol.dbPlatform);
+  }
 }
 
 export function applyTagsData(construct: IConstruct, tags: TagsData): void {

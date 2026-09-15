@@ -1,37 +1,43 @@
 {
   "name": "@linzjs/cdk-tags",
   "version": "1.19.0",
-  "main": "build/src/index.js",
-  "types": "build/src/index.d.ts",
-  "files": [
-    "build/src"
-  ],
   "author": {
     "name": "Land Information New Zealand",
     "url": "https://linz.govt.nz",
     "organization": true
   },
-  "scripts": {
-    "build": "tsc",
-    "lint": "npx eslint . --ignore-path .gitignore",
-    "test": "npm run build && node --test build/src/__test__/tags.test.js"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/linz/cdk-tags.git"
   },
-  "engines": {
-    "node": ">=18.0"
-  },
+  "files": [
+    "build/src"
+  ],
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "url": "git://github.com/linz/cdk-tags.git",
-    "type": "git"
+  "scripts": {
+    "build": "tsc",
+    "lint": "npm run lint:circular && npm run lint:oxlint && npm run lint:fmt && tsc",
+    "lint:circular": "node ./node_modules/@linzjs/style/node_modules/madge/bin/cli.js --circular --extensions js,ts,tsx --ts-config tsconfig.json ./src",
+    "lint:oxlint": "oxlint --deny-warnings",
+    "lint:fmt": "oxfmt --check .",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt --write .",
+    "test": "npm run build && node --test build/src/__test__/tags.test.js"
+  },
+  "devDependencies": {
+    "@linzjs/style": "^6.0.0",
+    "@types/node": "^26.4.0",
+    "oxlint-tsgolint": "^0.22.1"
   },
   "peerDependencies": {
     "aws-cdk-lib": "*",
     "constructs": "*"
   },
-  "devDependencies": {
-    "@linzjs/style": "^5.4.0",
-    "@types/node": "^26.4.0"
+  "engines": {
+    "node": ">=18.0"
   }
 }
