@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "lint": "npx concurrently \"npm run lint:circular\" \"npm run lint:oxlint\" \"npm run lint:fmt\" \"tsc\"",
+    "lint": "npm run lint:circular && npm run lint:oxlint && npm run lint:fmt && tsc",
     "lint:circular": "madge --circular --extensions js,ts,tsx --ts-config tsconfig.json ./src",
     "lint:oxlint": "oxlint --deny-warnings",
     "lint:fmt": "oxfmt --check .",
