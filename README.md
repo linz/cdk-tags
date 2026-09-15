@@ -24,11 +24,11 @@ applyTags(bucket, {
     multiRegionCopy: true,
   },
   log_streaming: {
-    filter_pattern: 'ERROR' // pattern syntax - https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html
+    filter_pattern: 'ERROR', // pattern syntax - https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html
   },
   dr: {
     enabled: true, // Enable disaster recovery for this resource
-  }
+  },
 });
 ```
 
