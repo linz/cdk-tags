@@ -31,8 +31,7 @@
   },
   "devDependencies": {
     "@linzjs/style": "^6.0.0",
-    "@types/node": "^26.4.0",
-    "oxlint-tsgolint": "^0.22.1"
+    "@types/node": "^26.4.1"
   },
   "peerDependencies": {
     "aws-cdk-lib": "*",
