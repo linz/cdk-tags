@@ -1,10 +1,12 @@
-export { Backup, BackupSchedule } from './backup.js';
+export type { Backup } from './backup.js';
+export { BackupSchedule } from './backup.js';
 export { getGitBuildInfo } from './build.js';
 export { TagKeys } from './constants.js';
 export { CommonDataTags } from './data.js';
-export { DisasterRecovery } from './dr.js';
-export { LolDbPlatform } from './lol-db-platform.js';
-export { ResponderTeam, ResponderTeams } from './responder-teams.js';
+export type { DisasterRecovery } from './dr.js';
+export type { LolDbPlatform } from './lol-db-platform.js';
+export type { ResponderTeam } from './responder-teams.js';
+export { ResponderTeams } from './responder-teams.js';
 export { SecurityClassification } from './security.js';
 export type { Impact, TagsBase } from './tags.js';
 export { Impacts } from './tags.js';

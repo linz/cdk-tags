@@ -1,6 +1,5 @@
-import { describe, it } from 'node:test';
-
 import { App, Stack } from 'aws-cdk-lib';
+import { describe, it } from 'node:test';
 
 import { BackupSchedule } from '../backup.js';
 import { SecurityClassification } from '../security.js';
