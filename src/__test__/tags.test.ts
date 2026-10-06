@@ -11,6 +11,7 @@ describe('applyTags', () => {
     const stack = new Stack(new App(), 'TestStack');
     applyTags(stack, {
       application: 'basemaps',
+      component: 'logging',
       environment: 'prod',
       group: 'li',
       classification: SecurityClassification.Unclassified,

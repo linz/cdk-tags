@@ -32,6 +32,13 @@ export interface TagsBase {
   application: string;
 
   /**
+   * Component of the application
+   *
+   * Optioanlly used to identify a sub-component of the application, e.g. "api", "worker", "frontend"
+   */
+  component?: string;
+
+  /**
    * LINZ group that the resources belong to
    */
   group: 'step' | 'li';
