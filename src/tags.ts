@@ -123,6 +123,9 @@ export function applyTags(construct: IConstruct, ctx: TagsBase): void {
 
   // applications tags
   tag(construct, TagKeys.APP_NAME, ctx.application);
+  if (ctx.component) {
+    tag(construct, TagKeys.APP_COMPONENT, ctx.component);
+  }
   if (buildInfo) {
     tag(construct, TagKeys.APP_VERSION, buildInfo.version);
   }
