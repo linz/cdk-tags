@@ -11,7 +11,13 @@ import { applyTags } from '../tags.js';
 
 describe('applyTags', () => {
   // If this test breaks the README needs to be updated
-  it('should apply example from README.md', () => {
+  it('should apply example from README.md', (t) => {
+    t.mock.property(process, 'env', {
+      GITHUB_RUN_ID: '123',
+      GITHUB_REPOSITORY: 'linz/basemaps',
+      GITHUB_RUN_ATTEMPT: '1',
+    });
+
     const stack = new Stack(new App(), 'TestStack');
     new Bucket(stack, 'Bucket');
     applyTags(stack, {
@@ -42,7 +48,9 @@ describe('applyTags', () => {
       { Key: 'linz.app.impact', Value: 'moderate' },
       { Key: 'linz.app.component', Value: 'logging' },
       { Key: 'linz.app.version', Value: Match.stringLikeRegexp('^v[0-9]+') },
+      { Key: 'linz.build.id', Value: '123-1' },
       { Key: 'linz.environment', Value: 'prod' },
+      { Key: 'linz.git.repository', Value: 'linz/basemaps' },
       { Key: 'linz.group', Value: 'li' },
       { Key: 'linz.responder.team', Value: 'LI - Basemaps' },
       { Key: 'linz.git.hash', Value: Match.stringLikeRegexp('^[a-f0-9]+') },
