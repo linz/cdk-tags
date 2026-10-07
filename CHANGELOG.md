@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.20.1](https://github.com/linz/cdk-tags/compare/v1.20.0...v1.20.1) (2026-10-07)
+
+
+### Bug Fixes
+
+* actually apply linz.app.component ([#288](https://github.com/linz/cdk-tags/issues/288)) ([a34e309](https://github.com/linz/cdk-tags/commit/a34e309d43b9f0341fa97b36f829d28f5637b648))
+
 ## [1.20.0](https://github.com/linz/cdk-tags/compare/v1.19.0...v1.20.0) (2026-10-07)
 
 
