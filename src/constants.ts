@@ -4,6 +4,7 @@
 export const TagKeys = {
   // Application tags
   APP_NAME: 'linz.app.name',
+  APP_COMPONENT: 'linz.app.component',
   APP_VERSION: 'linz.app.version',
   APP_IMPACT: 'linz.app.impact',
 
