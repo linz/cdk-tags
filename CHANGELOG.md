@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.20.0](https://github.com/linz/cdk-tags/compare/v1.19.0...v1.20.0) (2026-10-07)
+
+
+### Features
+
+* add Dependabot Watcher workflow ([#278](https://github.com/linz/cdk-tags/issues/278)) ([6fcf48d](https://github.com/linz/cdk-tags/commit/6fcf48db12facf210eca81fd0e777d90b3afd646))
+* add linz.app.component ([#285](https://github.com/linz/cdk-tags/issues/285)) ([045843a](https://github.com/linz/cdk-tags/commit/045843aac69ba6ac77b6fc4365c2fd4958ccec98))
+
 ## [1.19.0](https://github.com/linz/cdk-tags/compare/v1.18.0...v1.19.0) (2026-08-25)
 
 
