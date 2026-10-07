@@ -30,7 +30,7 @@
     "test": "npm run build && node --test build/src/__test__/tags.test.js"
   },
   "devDependencies": {
-    "@linzjs/style": "^6.0.0",
+    "@linzjs/style": "^6.1.1",
     "@types/node": "^26.6.2"
   },
   "peerDependencies": {
