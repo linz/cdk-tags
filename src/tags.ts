@@ -17,12 +17,11 @@ export type Impact = (typeof Impacts)[number];
 export interface TagsBase {
   /**
    * Environment of the resource
-   *
    * @example 'prod'
    *
    * @see AwsEnv in @linz/accounts
    */
-  environment: 'nonprod' | 'preprod' | 'prod' | 'postprod';
+  environment: 'nonprod' | 'preprod' | 'prod' | 'postprod' | 'yae';
 
   /**
    * Application name
