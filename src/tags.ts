@@ -22,7 +22,7 @@ export interface TagsBase {
    *
    * @see AwsEnv in @linz/accounts
    */
-  environment: 'nonprod' | 'preprod' | 'prod' | 'postprod';
+  environment: 'nonprod' | 'preprod' | 'prod' | 'postprod' | 'yae';
 
   /**
    * Application name
