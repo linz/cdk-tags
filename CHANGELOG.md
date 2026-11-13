@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.21.0](https://github.com/linz/cdk-tags/compare/v1.20.1...v1.21.0) (2026-11-13)
+
+
+### Features
+
+* support yae environment ENABLE-8366 ([#294](https://github.com/linz/cdk-tags/issues/294)) ([fe40c28](https://github.com/linz/cdk-tags/commit/fe40c2873ff8d0952d4867790857cb57bf19a548))
+
 ## [1.20.1](https://github.com/linz/cdk-tags/compare/v1.20.0...v1.20.1) (2026-10-07)
 
 
